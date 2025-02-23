@@ -1,0 +1,15 @@
+.content-container {
+    display: flex;
+    flex: 1;
+    margin-top: 80px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.content-container.sidebar-open {
+    margin-left: 250px;
+}
+
+.component-container {
+    
+}

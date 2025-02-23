@@ -1,13 +1,22 @@
+import React, { useState } from 'react';
 import { Button } from './components/Button/Button';
 import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
+import { AppContextProvider} from './components/Context/AppContext';
 import './App.css';
+import MainContent from './components/MainContent/MainContent';
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-        <Button>Click me</Button>
-    </div>
+    <AppContextProvider>
+      <div className="app-container">
+        <Navbar />
+        <div className="content-container">
+          <Sidebar />
+          <MainContent />
+        </div>
+      </div>
+    </AppContextProvider>
   );
 }
 

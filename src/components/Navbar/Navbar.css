@@ -1,7 +1,72 @@
-nav {
+/* Navbar container */
+.navbar {
     width: 100%;
     top: 0;
-    height: 50px;
+    height: 80px;
+    position: fixed;
+    background-color: #5b637493;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navigation list - Spread across the navbar */
+.nav-list {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation item */
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon styling */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+
+/* Tooltip (appears on hover) */
+.tooltip {
     position: absolute;
-    background-color: aliceblue;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+/* Show tooltip on hover */
+.nav-item:hover .tooltip {
+    opacity: 1;
+}
+
+.links-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
 }

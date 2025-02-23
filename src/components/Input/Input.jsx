@@ -10,6 +10,8 @@ export const Input = ({
     type = "text",
     state,
     icon,
+    value,
+    onChange,
     className="",
     children,
     props
@@ -19,7 +21,8 @@ export const Input = ({
             <label></label>
             <input 
                 type={type}
-                
+                onChange={onChange}
+                value={value}
             />
         </>
     );
