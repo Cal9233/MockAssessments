@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaReact, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
 import { Button } from '../Button/Button';
-import {useAppContext} from '../Context/AppContext'
+import {useAppContext} from '../../Context/AppContext'
 import './Navbar.css';
 
 const itemObjectConfig = {

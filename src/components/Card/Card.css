@@ -1,0 +1,99 @@
+/* Card.css */
+:root {
+    /* Neutrals */
+    --neutral-50: #f9fafb;
+    --neutral-100: #f3f4f6;
+    --neutral-200: #e5e7eb;
+    --neutral-300: #d1d5db;
+    --neutral-400: #9ca3af;
+    --neutral-500: #6b7280;
+    --neutral-600: #4b5563;
+    --neutral-700: #374151;
+    --neutral-800: #1f2937;
+    --neutral-900: #111827;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    color: var(--neutral-900);
+    background-color: white;
+    box-sizing: border-box;
+    transition: all 150ms ease;
+  }
+  
+  /* Card variants */
+  .card-elevated {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-outlined {
+    border: 1px solid var(--neutral-200);
+  }
+  
+  .card-flat {
+    background-color: var(--neutral-50);
+  }
+  
+  /* Clickable card */
+  .card-clickable {
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  .card-clickable:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--neutral-300);
+  }
+  
+  /* Hoverable card */
+  .card-hoverable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Card sections */
+  .card-header {
+    padding: 1.25rem 1.25rem 0.75rem;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--neutral-900);
+  }
+  
+  .card-content {
+    padding: 0.75rem 1.25rem;
+    flex-grow: 1;
+  }
+  
+  .card-footer {
+    padding: 0.75rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--neutral-200);
+    background-color: var(--neutral-50);
+  }
+  
+  /* Responsive behavior */
+  @media (min-width: 640px) {
+    .card {
+      max-width: 100%;
+    }
+  }
+  
+  /* Card grid system */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }

@@ -1,0 +1,6 @@
+.output-container {
+    background-color: white;
+    color: black;
+    position: absolute;
+    transform: translateX(50%);
+}

@@ -4,10 +4,13 @@ export const AppContext = createContext();
 
 export const AppContextProvider = ({children}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [typeValue, setTypeValue] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [typeValue, setTypeValue] = useState({
+        name: "",
+        email: ""
+    });
 
     const handleSidebarOpen = () => {
-        console.log("Button toggle hit")
         setIsOpen(prev => !prev);
     }
 
@@ -15,12 +18,25 @@ export const AppContextProvider = ({children}) => {
         setTypeValue(e.target.value);
     }
 
+    const handleModalOpen = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+    }
+    
+
     const value = {
         isOpen,
         setIsOpen,
         handleSidebarOpen,
         typeValue,
-        handleTypeChange
+        handleTypeChange,
+        isModalOpen,
+        setIsModalOpen,
+        handleModalOpen,
+        handleModalClose
     }
     
     return (

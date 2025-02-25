@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Button } from '../Button/Button';
 import { FaReact, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Sidebar.css";
-import { useAppContext } from '../Context/AppContext';
+import { useAppContext } from '../../Context/AppContext';
 
 const itemObjectConfig = {
     reactObj: {
